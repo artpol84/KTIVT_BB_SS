@@ -1,5 +1,5 @@
 PROJECT=KTIVT_BB_SS
-OS_SYSTEM=WINDOWS
+OS_SYSTEM=LINUX
 
 # Two additional CFLAGS must be used for Angstrom
 # They must not be used for Debian or Ubuntu. I couldn't find out why. 
