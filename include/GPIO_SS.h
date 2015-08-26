@@ -23,11 +23,13 @@
 #define GPIO_SPI_INT_Ch2 26
 #define GPIO_SPI_INT_Ch3 27
 #define GPIO_SPI_CS_Disp 86
-#define GPIO_Ch_Sync 89
+#define GPIO_Sync_Ch1_Ch2_Ch3 89
 #define GPIO_SPI_Reset_Ch1 65
 #define GPIO_SPI_Reset_Ch2 70
 #define GPIO_SPI_Reset_Ch3 71
 #define GPIO_SPI_CS_Col 49
+
+
 
 enum PIN_DIRECTION{
 	INPUT_PIN=0,

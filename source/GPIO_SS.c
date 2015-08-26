@@ -1,10 +1,11 @@
 /*
- * GPIO_SS.h
+ * GPIO_SS.c
  *
  * Version: 0.0
  * Date:	26.7.2015
  *
- * Develop: Ivan Neskorodev ivan.neskorodev@gmail.com
+ * Develop: Ivan Neskorodev
+ * Email: ivan.neskorodev@gmail.com
  *
  */
 #include "../include/GPIO_SS.h"
@@ -165,21 +166,22 @@ int gpio_get_value_interrupt(int fd, int timeout){
 	    return -1;
 	}
 
-	return 1;// c - '0';
+	return 1;// interrupt happened
+	//return c - '0';
 }
 
 
 /******************************************************
  * Gpio open file value Write Only
  *****************************************************/
-int gpio_fd_open_W_O(unsigned int gpio){
+int gpio_fd_open_R_W(unsigned int gpio){
 
 	int fd;
 	char buf[64];
 
 	snprintf(buf,sizeof(buf), SYSFS_GPIO_DIR "/gpio%d/value",gpio);
 
-	fd=open(buf, O_WRONLY);
+	fd=open(buf, O_RDWR);
 	if (fd<0){
 		perror("gpio/value write only");
 		return fd;

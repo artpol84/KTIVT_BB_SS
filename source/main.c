@@ -163,19 +163,19 @@ static void transfer(int fd){
 	int fd_GPIO_SPI_Reset_Ch3;
 	int fd_GPIO_SPI_CS_Col;
 
-	fd_GPIO_SPI_CS_Ch1 = gpio_fd_open_W_O(GPIO_SPI_CS_Ch1);
-	fd_GPIO_SPI_CS_Ch2 = gpio_fd_open_W_O(GPIO_SPI_CS_Ch2);
-	fd_GPIO_SPI_CS_Ch3 = gpio_fd_open_W_O(GPIO_SPI_CS_Ch3);
+	fd_GPIO_SPI_CS_Ch1 = gpio_fd_open_R_W(GPIO_SPI_CS_Ch1);
+	fd_GPIO_SPI_CS_Ch2 = gpio_fd_open_R_W(GPIO_SPI_CS_Ch2);
+	fd_GPIO_SPI_CS_Ch3 = gpio_fd_open_R_W(GPIO_SPI_CS_Ch3);
 
 	fd_GPIO_SPI_INT_Ch1 = gpio_fd_open_R_O(GPIO_SPI_INT_Ch1);
 	fd_GPIO_SPI_INT_Ch2 = gpio_fd_open_R_O(GPIO_SPI_INT_Ch2);
 	fd_GPIO_SPI_INT_Ch3 = gpio_fd_open_R_O(GPIO_SPI_INT_Ch3);
 
-	fd_GPIO_SPI_CS_Disp = gpio_fd_open_W_O(GPIO_SPI_CS_Disp);
-	fd_GPIO_SPI_Reset_Ch1 = gpio_fd_open_W_O(GPIO_SPI_Reset_Ch1);
-	fd_GPIO_SPI_Reset_Ch2 = gpio_fd_open_W_O(GPIO_SPI_Reset_Ch2);
-	fd_GPIO_SPI_Reset_Ch3 = gpio_fd_open_W_O(GPIO_SPI_Reset_Ch3);
-	fd_GPIO_SPI_CS_Col = gpio_fd_open_W_O(GPIO_SPI_CS_Col);
+	fd_GPIO_SPI_CS_Disp = gpio_fd_open_R_W(GPIO_SPI_CS_Disp);
+	fd_GPIO_SPI_Reset_Ch1 = gpio_fd_open_R_W(GPIO_SPI_Reset_Ch1);
+	fd_GPIO_SPI_Reset_Ch2 = gpio_fd_open_R_W(GPIO_SPI_Reset_Ch2);
+	fd_GPIO_SPI_Reset_Ch3 = gpio_fd_open_R_W(GPIO_SPI_Reset_Ch3);
+	fd_GPIO_SPI_CS_Col = gpio_fd_open_R_W(GPIO_SPI_CS_Col);
 
 	gpio_set_value(GPIO_SPI_CS_Ch1, HIGHT , fd_GPIO_SPI_CS_Ch1 );
 	gpio_set_value(GPIO_SPI_CS_Ch2, HIGHT , fd_GPIO_SPI_CS_Ch2 );
@@ -289,18 +289,3 @@ static void transfer(int fd){
 }
 
 
-/* int i;
- 	for(i=0;i<10;i++)
- 	{
- 		printf("Hello world! %d\n",i);
-
- 		if(i==5)
- 		{
- 			printf("FIVEx\n");
- 		}
- 		usleep(500000);
- 	}
-
- 	printf("calc = %d\n",calcsum(1,2));
-
-     return 0; */

@@ -1,8 +1,12 @@
 /*
  * SPI_SS.c
  *
- *  Created on: 30 июля 2015 г.
- *      Author: Muxamor
+ * Version: 0.0
+ * Date:	26.7.2015
+ *
+ * Develop: Ivan Neskorodev
+ * Email: ivan.neskorodev@gmail.com
+ *
  */
 /*#include <stdint.h>
 #include <unistd.h>
