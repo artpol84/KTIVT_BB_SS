@@ -11,21 +11,31 @@
 #include "../include/BB_Setup.h"
 #include "../include/GPIO_SS.h"
 
+/* in enum you're getting sequential numbers starting from 0, so:
+CH1_IDX == 0
+CH2_IDX == 1
+...
+CHN_IDX == N-1
+CH_MAX == N, this value us usually used for flexibility when creating arrays
+*/
+int channels[CH_MAX];
 
-int Setup_GPIO_BB (void){
-	/*int i;
-	int size_mass;
 	unsigned int GPIO_PIN_NUMBER [] = {GPIO_SPI_CS_Ch1,GPIO_SPI_CS_Ch2,GPIO_SPI_CS_Ch3,GPIO_SPI_CS_Disp,GPIO_SPI_CS_Col,
 			 	 	 	 	 	 	 	GPIO_Sync_Ch1_Ch2_Ch3,
 										GPIO_SPI_INT_Ch1, GPIO_SPI_INT_Ch2, GPIO_SPI_INT_Ch3,
 										GPIO_SPI_Reset_Ch1, GPIO_SPI_Reset_Ch2, GPIO_SPI_Reset_Ch3};
 
+
+int Setup_GPIO_BB (void){
+	int i;
+	int size_mass;
+
 	 size_mass = (sizeof(GPIO_PIN_NUMBER) / sizeof(GPIO_PIN_NUMBER[0]));
 
 	 for (i=0; i< size_mass ;i++){
-
-	  gpio_export(GPIO_PIN_NUMBER[i]);
-	 }*/
+	    gpio_export(GPIO_PIN_NUMBER[i]);
+	    channel[i] = 
+	 }
 
 //Export GPIO to the Linux sys.
 	gpio_export(GPIO_SPI_CS_Ch1);
